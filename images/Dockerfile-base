@@ -1,0 +1,10 @@
+FROM lulichn/jmeter:4.0
+
+MAINTAINER d.higashi
+
+RUN set -ex \
+	&& cd $JMETER_HOME/bin \
+	&& sed -i -e 's/^#server.rmi.ssl.disable=false/server.rmi.ssl.disable=true/g' jmeter.properties
+
+ADD json-java/json-java.jar $JMETER_HOME/lib/json-java.jar
+

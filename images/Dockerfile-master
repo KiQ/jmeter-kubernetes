@@ -1,0 +1,6 @@
+FROM kiqgs/jmeter-base
+
+MAINTAINER d.higashi
+
+EXPOSE 60000
+

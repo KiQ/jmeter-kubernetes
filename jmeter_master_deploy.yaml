@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: jmmaster
-        image: kubernautslabs/jmeter_master
-        command: [ "/bin/bash", "-c", "--" ]
+        image: kiqgs/jmeter-master
+        command: [ "/bin/sh", "-c", "--" ]
         args: [ "while true; do sleep 30; done;" ]
         volumeMounts:
           - name: loadtest
